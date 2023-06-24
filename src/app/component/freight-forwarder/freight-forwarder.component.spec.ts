@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ForwarderComponent } from './forwarder.component';
+import { FreightForwarderComponent } from './freight-forwarder.component';
 
 describe('ForwarderComponent', () => {
-  let component: ForwarderComponent;
-  let fixture: ComponentFixture<ForwarderComponent>;
+  let component: FreightForwarderComponent;
+  let fixture: ComponentFixture<FreightForwarderComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ForwarderComponent]
+      declarations: [FreightForwarderComponent]
     });
-    fixture = TestBed.createComponent(ForwarderComponent);
+    fixture = TestBed.createComponent(FreightForwarderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

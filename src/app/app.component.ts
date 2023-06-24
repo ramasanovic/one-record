@@ -29,21 +29,17 @@ export class AppComponent implements OnInit{
         icon: 'pi pi-fw pi-box'
       },
       {
+        label: 'Freight Forwarder',
+        routerLink: 'freight-forwarder',
+        icon: 'pi pi-fw pi-arrow-circle-right'
+      },
+      {
         label: 'Forwarder',
-        routerLink: 'forwarder',
-        icon: 'pi pi-fw pi-directions'
-      },
-      {
-        label: 'Customer',
-        routerLink: 'customer',
-        icon: 'pi pi-fw pi-user'
-      },
-      {
-        label: 'Booking',
         routerLink: 'booking',
         icon: 'pi pi-fw pi-book'
       }
     ];
+
     this.bookings.push({
       origin: 'ADA',
       destination: 'IST',

@@ -10,7 +10,7 @@ import {ButtonModule} from "primeng/button";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {DynamicDialogModule} from "primeng/dynamicdialog";
 import {TruckComponent} from './component/truck/truck.component';
-import {ForwarderComponent} from './component/forwarder/forwarder.component';
+import {FreightForwarderComponent} from './component/freight-forwarder/freight-forwarder.component';
 import {CustomerComponent} from './component/customer/customer.component';
 import {DockModule} from "primeng/dock";
 import {RadioButtonModule} from "primeng/radiobutton";
@@ -31,7 +31,7 @@ import {ToastModule} from "primeng/toast";
     StepperComponent,
     ConfirmComponent,
     TruckComponent,
-    ForwarderComponent,
+    FreightForwarderComponent,
     CustomerComponent,
     BookingComponent
   ],

@@ -11,6 +11,7 @@ import {MessageService} from "primeng/api";
 export class BookingComponent implements OnInit {
   cityList: City[] | undefined;
   booking: Booking = {};
+  fwbBtnDisable: boolean = true;
 
   constructor(private bookingService: BookingService, private messageService: MessageService) {
   }
@@ -26,11 +27,15 @@ export class BookingComponent implements OnInit {
 
   }
 
-  onClick(){
+  saveBooking(){
     this.bookingService.getAirports().subscribe((data) => {
       this.messageService.add({severity:'success', summary:'Success', detail:'Airport Service'});
-      console.log(data)
+      this.fwbBtnDisable= false;
     })
+  }
+
+  sendFWB(){
+    this.messageService.add({severity:'success', summary:'FWB Sent Successfully !', detail:'Successful'});
   }
 
 }
