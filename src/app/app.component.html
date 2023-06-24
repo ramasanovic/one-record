@@ -9,5 +9,27 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <div style="padding-top: 50px; padding-left: 50px; padding-right: 50px">
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+</div>
+<div style="position: absolute; bottom: 0; left: 0; min-width: 100%; min-height: 200px">
+<p-table [paginator]="true" [rows]="3" [value]="bookings" [tableStyle]="{ 'min-width': '50rem' }">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Date</th>
+      <th>Piece</th>
+      <th>Weight</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-booking>
+    <tr>
+      <td>{{ booking.origin }}</td>
+      <td>{{ booking.destination }}</td>
+      <td>{{ booking.date }}</td>
+      <td>{{ booking.piece }}</td>
+      <td>{{ booking.weight }}</td>
+    </tr>
+  </ng-template>
+</p-table>
 </div>

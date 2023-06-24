@@ -1,15 +1,20 @@
 import {Component, OnInit} from '@angular/core';
+import {Booking} from "./model/Booking";
 import {MenuItem} from "primeng/api";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: []
 })
 export class AppComponent implements OnInit{
   title = 'one-record-front';
   menuPos : "bottom" | "top" | "left" | "right" = "bottom";
   items: MenuItem[] | undefined;
+  bookings: Booking[] = [];
+
+
 
   ngOnInit(): void {
     this.items = [
@@ -39,5 +44,69 @@ export class AppComponent implements OnInit{
         icon: 'pi pi-fw pi-book'
       }
     ];
+    this.bookings.push({
+      origin: 'ADA',
+      destination: 'IST',
+      date: '23.06.2023',
+      dimension: 3,
+      weight: 50,
+      piece: 2,
+      status: 1
+    });
+    this.bookings.push({
+      origin: 'ADA',
+      destination: 'IST',
+      date: '23.06.2023',
+      dimension: 3,
+      weight: 50,
+      piece: 2,
+      status: 1
+    });
+    this.bookings.push({
+      origin: 'ADA',
+      destination: 'IST',
+      date: '23.06.2023',
+      dimension: 3,
+      weight: 50,
+      piece: 2,
+      status: 1
+    });
+    this.bookings.push({
+      origin: 'ADA',
+      destination: 'IST',
+      date: '23.06.2023',
+      dimension: 3,
+      weight: 50,
+      piece: 2,
+      status: 1
+    });
+    this.bookings.push({
+      origin: 'ADA',
+      destination: 'IST',
+      date: '23.06.2023',
+      dimension: 3,
+      weight: 50,
+      piece: 2,
+      status: 1
+    });
+    this.bookings.push({
+      origin: 'ADA',
+      destination: 'IST',
+      date: '23.06.2023',
+      dimension: 3,
+      weight: 50,
+      piece: 2,
+      status: 1
+    });
+    this.bookings.push({
+      origin: 'ADA',
+      destination: 'IST',
+      date: '23.06.2023',
+      dimension: 3,
+      weight: 50,
+      piece: 2,
+      status: 1
+    });
   }
+
 }

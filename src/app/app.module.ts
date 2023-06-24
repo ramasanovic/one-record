@@ -21,6 +21,9 @@ import {FormsModule} from "@angular/forms";
 import {DropdownModule} from "primeng/dropdown";
 import {InputNumberModule} from "primeng/inputnumber";
 import {CalendarModule} from "primeng/calendar";
+import {TableModule} from "primeng/table";
+import {HttpClientModule} from "@angular/common/http";
+import {ToastModule} from "primeng/toast";
 
 @NgModule({
   declarations: [
@@ -34,6 +37,7 @@ import {CalendarModule} from "primeng/calendar";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     AppRoutingModule,
     StepsModule,
@@ -46,7 +50,9 @@ import {CalendarModule} from "primeng/calendar";
     InputTextModule,
     DropdownModule,
     InputNumberModule,
-    CalendarModule
+    CalendarModule,
+    TableModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

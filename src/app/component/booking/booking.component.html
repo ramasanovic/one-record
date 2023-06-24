@@ -1,3 +1,4 @@
+<p-toast></p-toast>
 <div class="grid">
   <div class="col-12 md:col-6 lg:col-2 sm:flex-nowrap">
     <div class="flex flex-column gap-2">
@@ -41,13 +42,15 @@
     </div>
   </div>
 
-  <div class="col-12 md:col-6 lg:col-2 sm:flex-nowrap">
+</div>
+
+<div class="grid">
+  <div class="col-12 md:col-6 lg:col-2 col-offset-4">
     <div class="flex flex-column gap-2">
       &nbsp;
-      <p-button label="Save Booking"></p-button>
+      <p-button label="Save Booking" (onClick)="onClick()"></p-button>
     </div>
   </div>
-
 </div>
 
 

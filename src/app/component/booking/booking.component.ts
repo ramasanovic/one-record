@@ -1,13 +1,19 @@
 import {Component, OnInit} from '@angular/core';
+import {BookingService} from "../../service/bookingService";
+import {MessageService} from "primeng/api";
 
 @Component({
   selector: 'app-booking',
   templateUrl: './booking.component.html',
-  styleUrls: ['./booking.component.scss']
+  styleUrls: ['./booking.component.scss'],
+  providers: [MessageService]
 })
 export class BookingComponent implements OnInit {
   cityList: City[] | undefined;
   booking: Booking = {};
+
+  constructor(private bookingService: BookingService, private messageService: MessageService) {
+  }
 
   ngOnInit(): void {
     this.cityList = [
@@ -18,6 +24,13 @@ export class BookingComponent implements OnInit {
       { name: 'Paris', code: 'PRS' }
     ];
 
+  }
+
+  onClick(){
+    this.bookingService.getAirports().subscribe((data) => {
+      this.messageService.add({severity:'success', summary:'Success', detail:'Airport Service'});
+      console.log(data)
+    })
   }
 
 }
