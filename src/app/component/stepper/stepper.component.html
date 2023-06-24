@@ -1,0 +1,11 @@
+<div style="padding-top: 10%">
+  <p-steps [model]="items" [activeIndex]="activeIndex" (activeIndexChange)="onActiveIndexChange($event)"
+           [readonly]="false"></p-steps>
+
+  <div style="text-align: center; padding-top: 10%">
+    <p-button label="Go Submit" icon="pi pi-check" (onClick)="openDialog()"></p-button>
+  </div>
+</div>
+
+
+
