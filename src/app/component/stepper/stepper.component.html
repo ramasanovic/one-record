@@ -329,14 +329,42 @@
 
 
 </div>
-
+<p-toast></p-toast>
 <div style="">
   <p-steps [model]="items" [activeIndex]="activeIndex" (activeIndexChange)="onActiveIndexChange($event)"
            [readonly]="false"></p-steps>
 
-  <div style="text-align: center; padding-top: 10%">
+<!--  <div style="text-align: center; padding-top: 10%">
     <p-button label="Go Submit" icon="pi pi-check" (onClick)="openDialog()"></p-button>
+  </div>-->
+
+  <div style="padding-top: 5%" class="grid flex-row-reverse">
+    <div class="flex flex-column gap-2" style="padding-right: 5px">
+      &nbsp;
+      <p-button label="POD" [disabled]="activeIndex <5"></p-button>
+    </div>
+    <div class="flex flex-column gap-2" style="padding-right: 5px">
+      &nbsp;
+      <p-button label="OFD" [disabled]="activeIndex <4"></p-button>
+    </div>
+    <div class="flex flex-column gap-2" style="padding-right: 5px">
+      &nbsp;
+      <p-button label="RIW" [disabled]="activeIndex <3"></p-button>
+    </div>
+    <div class="flex flex-column gap-2" style="padding-right: 5px">
+      &nbsp;
+      <p-button label="DLV" [disabled]="activeIndex <2"></p-button>
+    </div>
+    <div class="flex flex-column gap-2" style="padding-right: 5px">
+      &nbsp;
+      <p-button label="CCD" (click)="clickCCD()" [disabled]="activeIndex <1"></p-button>
+    </div>
+    <div class="flex flex-column gap-2" style="padding-right: 5px">
+      &nbsp;
+      <p-button label="NFD" (click)="clickNFD()"></p-button>
+    </div>
   </div>
+
 </div>
 
 
